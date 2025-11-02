@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Disallow build artifacts and development files
+Disallow: /_next/
+Disallow: /api/
+Disallow: *.json$
+
+# Allow important pages
+Allow: /
+Allow: /projects/
+Allow: /contact/
+
+# Sitemap location
+Sitemap: https://sumit-singh53.github.io/My_Portfolio/sitemap.xml
+
+# Crawl delay (optional - helps with server load)
+Crawl-delay: 1

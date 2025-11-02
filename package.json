@@ -1,17 +1,44 @@
 {
   "name": "my-portfolio",
   "version": "1.0.0",
+  "description": "Personal portfolio website showcasing Full Stack Development projects",
+  "author": "Sumit Singh <sumitrsingh53@gmail.com>",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "export": "next build",
+    "deploy": "npm run build && touch out/.nojekyll",
+    "deploy:github": "npm run build && touch out/.nojekyll && gh-pages -d out",
+    "analyze": "cross-env ANALYZE=true npm run build",
+    "clean": "rimraf .next out",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "next": "latest",
     "react": "latest",
-    "react-dom": "latest",
-    "tailwindcss": "^2.2.19",
-    "postcss": "^8.2.14",
-    "autoprefixer": "^10.4.2"
-  }
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.0",
+    "postcss": "^8.4.31",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.0.0",
+    "eslint-config-next": "latest"
+  },
+  "keywords": [
+    "portfolio",
+    "nextjs",
+    "react",
+    "tailwindcss",
+    "full-stack",
+    "developer"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sumit-singh53/My_Portfolio.git"
+  },
+  "homepage": "https://sumit-singh53.github.io/My_Portfolio"
 }
