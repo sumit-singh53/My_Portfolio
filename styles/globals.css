@@ -1,0 +1,834 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Force dark background immediately */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background: #000000 !important;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #000000 !important;
+  color: #00ff41 !important;
+  font-family: 'Inter', sans-serif !important;
+  min-height: 100vh !important;
+  overflow-x: hidden !important;
+  position: relative !important;
+}
+
+#__next {
+  background: #000000 !important;
+  color: #00ff41 !important;
+}
+
+/* Dark Matrix Theme Variables */
+:root {
+  --matrix-green: #00ff41;
+  --matrix-dark-green: #008f11;
+  --matrix-light-green: #39ff14;
+  --matrix-bg: #000000;
+  --matrix-dark-bg: #0a0a0a;
+  --matrix-text: #00ff41;
+  --matrix-glow: rgba(0, 255, 65, 0.2);
+  --matrix-border: rgba(0, 255, 65, 0.3);
+}
+
+/* Enhanced Matrix Rain Background */
+.matrix-rain-global {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  pointer-events: none !important;
+  z-index: -10 !important;
+  background: #000000 !important;
+  overflow: hidden !important;
+}
+
+.matrix-column {
+  position: absolute;
+  top: -100%;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: normal;
+  letter-spacing: 1px;
+  animation: matrix-drop linear infinite;
+  opacity: 0.4;
+  text-shadow: 0 0 3px currentColor;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  white-space: nowrap;
+}
+
+/* Dark Matrix Column Variations - All Green Tones */
+.matrix-column-1 { left: 2%; color: #00ff41; animation-duration: 6s; animation-delay: 0s; }
+.matrix-column-2 { left: 6%; color: #008f11; animation-duration: 8s; animation-delay: 1s; }
+.matrix-column-3 { left: 10%; color: #00ff41; animation-duration: 7s; animation-delay: 2s; }
+.matrix-column-4 { left: 14%; color: #39ff14; animation-duration: 9s; animation-delay: 3s; }
+.matrix-column-5 { left: 18%; color: #008f11; animation-duration: 6.5s; animation-delay: 4s; }
+.matrix-column-6 { left: 22%; color: #00ff41; animation-duration: 8.5s; animation-delay: 0.5s; }
+.matrix-column-7 { left: 26%; color: #39ff14; animation-duration: 7.5s; animation-delay: 1.5s; }
+.matrix-column-8 { left: 30%; color: #008f11; animation-duration: 9.5s; animation-delay: 2.5s; }
+.matrix-column-9 { left: 34%; color: #00ff41; animation-duration: 6.8s; animation-delay: 3.5s; }
+.matrix-column-10 { left: 38%; color: #39ff14; animation-duration: 8.8s; animation-delay: 0.8s; }
+.matrix-column-11 { left: 42%; color: #008f11; animation-duration: 7.8s; animation-delay: 1.8s; }
+.matrix-column-12 { left: 46%; color: #00ff41; animation-duration: 9.8s; animation-delay: 2.8s; }
+.matrix-column-13 { left: 50%; color: #39ff14; animation-duration: 6.3s; animation-delay: 3.8s; }
+.matrix-column-14 { left: 54%; color: #008f11; animation-duration: 8.3s; animation-delay: 0.3s; }
+.matrix-column-15 { left: 58%; color: #00ff41; animation-duration: 7.3s; animation-delay: 1.3s; }
+.matrix-column-16 { left: 62%; color: #39ff14; animation-duration: 9.3s; animation-delay: 2.3s; }
+.matrix-column-17 { left: 66%; color: #008f11; animation-duration: 6.6s; animation-delay: 3.3s; }
+.matrix-column-18 { left: 70%; color: #00ff41; animation-duration: 8.6s; animation-delay: 0.6s; }
+.matrix-column-19 { left: 74%; color: #39ff14; animation-duration: 7.6s; animation-delay: 1.6s; }
+.matrix-column-20 { left: 78%; color: #008f11; animation-duration: 9.6s; animation-delay: 2.6s; }
+.matrix-column-21 { left: 82%; color: #00ff41; animation-duration: 6.9s; animation-delay: 3.6s; }
+.matrix-column-22 { left: 86%; color: #39ff14; animation-duration: 8.9s; animation-delay: 0.9s; }
+.matrix-column-23 { left: 90%; color: #008f11; animation-duration: 7.9s; animation-delay: 1.9s; }
+.matrix-column-24 { left: 94%; color: #00ff41; animation-duration: 9.9s; animation-delay: 2.9s; }
+.matrix-column-25 { left: 98%; color: #39ff14; animation-duration: 6.4s; animation-delay: 3.9s; }
+
+@keyframes matrix-drop {
+  0% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+/* Subtle Matrix Streams */
+.matrix-stream {
+  position: absolute;
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  line-height: 14px;
+  color: #00ff41;
+  text-shadow: 0 0 2px currentColor;
+  animation: matrix-scroll linear infinite;
+  opacity: 0.2;
+  white-space: nowrap;
+}
+
+.matrix-stream-1 { top: 10%; color: #00ff41; animation-duration: 25s; animation-delay: 0s; }
+.matrix-stream-2 { top: 20%; color: #008f11; animation-duration: 30s; animation-delay: 5s; }
+.matrix-stream-3 { top: 30%; color: #39ff14; animation-duration: 20s; animation-delay: 10s; }
+.matrix-stream-4 { top: 40%; color: #00ff41; animation-duration: 35s; animation-delay: 15s; }
+.matrix-stream-5 { top: 50%; color: #008f11; animation-duration: 28s; animation-delay: 20s; }
+.matrix-stream-6 { top: 60%; color: #39ff14; animation-duration: 22s; animation-delay: 3s; }
+.matrix-stream-7 { top: 70%; color: #00ff41; animation-duration: 32s; animation-delay: 8s; }
+.matrix-stream-8 { top: 80%; color: #008f11; animation-duration: 26s; animation-delay: 13s; }
+.matrix-stream-9 { top: 90%; color: #39ff14; animation-duration: 24s; animation-delay: 18s; }
+
+@keyframes matrix-scroll {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Floating Matrix Particles */
+.matrix-particle {
+  position: absolute;
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  text-shadow: 0 0 3px currentColor;
+  animation: matrix-float linear infinite;
+  opacity: 0.6;
+}
+
+@keyframes matrix-float {
+  0% {
+    transform: translate(0, 100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(100px, -100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Subtle Matrix Grid */
+.matrix-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(0, 255, 65, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 65, 0.03) 1px, transparent 1px);
+  background-size: 100px 100px, 100px 100px;
+  animation: matrix-grid-pulse 15s ease-in-out infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes matrix-grid-pulse {
+  0%, 100% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+
+/* Dark Matrix Section Backgrounds */
+.hero-section {
+  position: relative;
+  background: rgba(0, 0, 0, 0.95) !important;
+  border-top: 1px solid rgba(0, 255, 65, 0.2);
+  box-shadow: 
+    0 0 10px rgba(0, 255, 65, 0.1),
+    inset 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+.about-section {
+  position: relative;
+  background: rgba(0, 0, 0, 0.95) !important;
+  border-top: 1px solid rgba(0, 255, 65, 0.15);
+  border-bottom: 1px solid rgba(0, 255, 65, 0.15);
+  box-shadow: 
+    0 0 8px rgba(0, 255, 65, 0.08),
+    inset 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+.projects-section {
+  position: relative;
+  background: rgba(0, 0, 0, 0.95) !important;
+  border-top: 1px solid rgba(0, 255, 65, 0.15);
+  border-bottom: 1px solid rgba(0, 255, 65, 0.15);
+  box-shadow: 
+    0 0 8px rgba(0, 255, 65, 0.08),
+    inset 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+.contact-section {
+  position: relative;
+  background: rgba(0, 0, 0, 0.95) !important;
+  border-top: 1px solid rgba(0, 255, 65, 0.15);
+  border-bottom: 1px solid rgba(0, 255, 65, 0.2);
+  box-shadow: 
+    0 0 10px rgba(0, 255, 65, 0.1),
+    inset 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+/* Dark Matrix Navigation */
+nav {
+  background: rgba(0, 0, 0, 0.98) !important;
+  border-bottom: 1px solid rgba(0, 255, 65, 0.2) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 15px rgba(0, 255, 65, 0.1) !important;
+}
+
+/* Subtle Matrix Atmosphere */
+.matrix-rain-global::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(0, 255, 65, 0.02) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(0, 255, 65, 0.015) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(0, 255, 65, 0.01) 0%, transparent 50%);
+  animation: matrix-atmosphere 20s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes matrix-atmosphere {
+  0% { opacity: 0.1; }
+  100% { opacity: 0.3; }
+}
+
+/* Scroll Animations */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.scroll-reveal.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animation Classes */
+.animate-fade-in {
+  animation: fade-in 0.8s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slide-up 1s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+.slide-in-left {
+  animation: slide-in-left 0.8s ease-out forwards;
+}
+
+.fade-in-left {
+  animation: fade-in-left 0.8s ease-out forwards;
+}
+
+.fade-in-right {
+  animation: fade-in-right 0.8s ease-out forwards;
+}
+
+.zoom-in {
+  animation: zoom-in 0.6s ease-out forwards;
+}
+
+/* Keyframes */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 80px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 60px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translate3d(-100px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fade-in-left {
+  from {
+    opacity: 0;
+    transform: translate3d(-80px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fade-in-right {
+  from {
+    opacity: 0;
+    transform: translate3d(80px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes zoom-in {
+  from {
+    opacity: 0;
+    transform: scale(0.6) translate3d(0, 30px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -8px, 0);
+  }
+}
+
+/* Project Card Animations */
+.project-card-animate {
+  opacity: 0;
+  transform: translate3d(0, 50px, 0);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform;
+}
+
+.project-card-animate.animate-in {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+/* Project Card Hover Effects */
+.project-card-hover {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform: translateY(0) scale(1);
+}
+
+.project-card-hover:hover {
+  transform: translateY(-12px) scale(1.05) !important;
+  box-shadow: 0 25px 50px -12px rgba(249, 115, 22, 0.2) !important;
+  border-color: #f97316 !important;
+}
+
+/* Dark Matrix Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+  border: 1px solid rgba(0, 255, 65, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 65, 0.3);
+  border-radius: 4px;
+  box-shadow: 0 0 4px rgba(0, 255, 65, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 255, 65, 0.5);
+  box-shadow: 0 0 6px rgba(0, 255, 65, 0.3);
+}
+
+/* Override Tailwind classes */
+.min-h-screen {
+  background: transparent !important;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .scroll-reveal {
+    transform: translateY(20px);
+  }
+  
+  .animate-float {
+    animation-duration: 4s;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal,
+  .animate-fade-in,
+  .animate-slide-up,
+  .animate-float,
+  .project-card-animate {
+    animation: none;
+    transition: none;
+  }
+  
+  .scroll-reveal {
+    opacity: 1;
+    transform: none;
+  }
+}/* Essenti
+al Cyberpunk Styles */
+
+/* Neon Text Effects */
+.neon-text {
+  color: #00ff41;
+  text-shadow: 
+    0 0 5px #00ff41,
+    0 0 10px #00ff41,
+    0 0 15px #00ff41,
+    0 0 20px #00ff41;
+  animation: neon-flicker 3s ease-in-out infinite alternate;
+}
+
+@keyframes neon-flicker {
+  0%, 100% {
+    text-shadow: 
+      0 0 5px #00ff41,
+      0 0 10px #00ff41,
+      0 0 15px #00ff41,
+      0 0 20px #00ff41;
+  }
+  50% {
+    text-shadow: 
+      0 0 2px #00ff41,
+      0 0 5px #00ff41,
+      0 0 8px #00ff41,
+      0 0 12px #00ff41;
+  }
+}
+
+/* Dark Matrix Button Styles */
+.cyber-button {
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(0, 255, 65, 0.3);
+  color: #00ff41;
+  padding: 12px 24px;
+  border-radius: 2px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px rgba(0, 255, 65, 0.1);
+}
+
+.cyber-button:hover {
+  background: rgba(0, 255, 65, 0.05);
+  border-color: rgba(0, 255, 65, 0.5);
+  box-shadow: 0 0 12px rgba(0, 255, 65, 0.2);
+  transform: translateY(-1px);
+}
+
+/* Dark Matrix Card Styles */
+.cyber-card {
+  background: rgba(0, 0, 0, 0.9);
+  border: 1px solid rgba(0, 255, 65, 0.2);
+  border-radius: 4px;
+  padding: 20px;
+  box-shadow: 
+    0 0 10px rgba(0, 255, 65, 0.1),
+    inset 0 0 20px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.cyber-card:hover {
+  border-color: rgba(0, 255, 65, 0.4);
+  box-shadow: 
+    0 0 15px rgba(0, 255, 65, 0.15),
+    inset 0 0 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-3px);
+}
+
+/* Dark Matrix Contact Card Styles */
+.contact-card {
+  background: rgba(0, 0, 0, 0.95);
+  border: 1px solid rgba(0, 255, 65, 0.25);
+  border-radius: 6px;
+  padding: 24px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(0, 255, 65, 0.1);
+}
+
+.contact-card:hover {
+  border-color: rgba(0, 255, 65, 0.4);
+  box-shadow: 0 0 12px rgba(0, 255, 65, 0.2);
+  transform: translateY(-3px) scale(1.01);
+}
+
+/* Dark Matrix Project Card Styles */
+.project-card {
+  background: rgba(0, 0, 0, 0.95);
+  border: 1px solid rgba(0, 255, 65, 0.25);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px rgba(0, 255, 65, 0.1);
+}
+
+.project-card:hover {
+  border-color: rgba(0, 255, 65, 0.4);
+  box-shadow: 0 0 12px rgba(0, 255, 65, 0.2);
+  transform: translateY(-5px) scale(1.02);
+}
+
+/* Dark Matrix Typography */
+h1, h2, h3, h4, h5, h6 {
+  color: #00ff41;
+  font-weight: 400;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: #00ff41;
+  text-shadow: 0 0 8px rgba(0, 255, 65, 0.3);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #00ff41;
+  text-shadow: 0 0 6px rgba(0, 255, 65, 0.2);
+  margin-bottom: 2rem;
+}
+
+/* Matrix Green Text */
+.gradient-text {
+  color: #00ff41;
+  text-shadow: 0 0 4px rgba(0, 255, 65, 0.3);
+  animation: matrix-glow 4s ease infinite;
+}
+
+@keyframes matrix-glow {
+  0% { 
+    text-shadow: 0 0 4px rgba(0, 255, 65, 0.3);
+    opacity: 0.8;
+  }
+  50% { 
+    text-shadow: 0 0 6px rgba(0, 255, 65, 0.4);
+    opacity: 1;
+  }
+  100% { 
+    text-shadow: 0 0 4px rgba(0, 255, 65, 0.3);
+    opacity: 0.8;
+  }
+}
+
+/* Glow Effects */
+.glow-effect {
+  box-shadow: 
+    0 0 20px rgba(57, 255, 20, 0.3),
+    0 0 40px rgba(57, 255, 20, 0.2),
+    0 0 60px rgba(57, 255, 20, 0.1);
+  transition: all 0.3s ease;
+}
+
+.glow-effect:hover {
+  box-shadow: 
+    0 0 30px rgba(57, 255, 20, 0.5),
+    0 0 60px rgba(57, 255, 20, 0.3),
+    0 0 90px rgba(57, 255, 20, 0.2);
+}
+
+/* Social Links */
+.social-link {
+  color: #ff1493;
+  font-size: 24px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.social-link:hover {
+  color: #00bfff;
+  transform: translateY(-3px) scale(1.2);
+  text-shadow: 0 0 15px currentColor;
+}
+
+/* Footer */
+footer {
+  background: rgba(0, 0, 0, 0.95);
+  border-top: 2px solid #ff1493;
+  box-shadow: 0 0 20px rgba(255, 20, 147, 0.3);
+}
+
+/* Skills */
+.skill-item {
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid #00bfff;
+  border-radius: 6px;
+  padding: 8px 16px;
+  margin: 4px;
+  display: inline-block;
+  color: #00bfff;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 191, 255, 0.2);
+}
+
+.skill-item:hover {
+  background: rgba(0, 191, 255, 0.1);
+  border-color: #00ffff;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Additional Dark Matrix Enhancements */
+
+/* Make text more readable on dark background */
+p, span, div {
+  color: #00ff41;
+  opacity: 0.9;
+}
+
+/* Subtle terminal-like styling */
+.terminal-text {
+  font-family: 'Courier New', monospace;
+  color: #00ff41;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 2px 4px;
+  border-radius: 2px;
+  font-size: 0.9em;
+}
+
+/* Dark window-like containers */
+.matrix-window {
+  background: rgba(0, 0, 0, 0.95);
+  border: 1px solid rgba(0, 255, 65, 0.2);
+  border-radius: 4px;
+  box-shadow: 
+    0 0 10px rgba(0, 255, 65, 0.05),
+    inset 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+/* Reduce overall brightness */
+.content-area {
+  background: rgba(0, 0, 0, 0.98);
+  color: #00ff41;
+}
+
+/* Make links more subtle */
+a {
+  color: #00ff41;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+a:hover {
+  opacity: 1;
+  text-shadow: 0 0 4px rgba(0, 255, 65, 0.3);
+}
+
+/* Reduce Matrix rain opacity even more */
+.matrix-column {
+  opacity: 0.25 !important;
+}
+
+.matrix-stream {
+  opacity: 0.15 !important;
+}
+
+/* Very subtle grid */
+.matrix-grid {
+  opacity: 0.05 !important;
+}
+
+/* Darker navigation text */
+nav a, nav span, nav h1 {
+  color: #00ff41 !important;
+  opacity: 0.9;
+}
+
+/* Footer styling */
+footer {
+  background: rgba(0, 0, 0, 0.98);
+  border-top: 1px solid rgba(0, 255, 65, 0.1);
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.05);
+}
+
+/* Make all text consistently green */
+* {
+  color: #00ff41;
+}
+
+/* Override any white or bright text */
+.text-white, .text-gray-100, .text-gray-200 {
+  color: #00ff41 !important;
+}/* Pixelate
+d Avatar Styling */
+.pixelated-avatar {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+/* Matrix-themed avatar container */
+.matrix-avatar-container {
+  background: linear-gradient(45deg, rgba(0, 255, 65, 0.2), rgba(0, 255, 65, 0.1));
+  border: 2px solid rgba(0, 255, 65, 0.3);
+  box-shadow: 
+    0 0 20px rgba(0, 255, 65, 0.2),
+    inset 0 0 20px rgba(0, 255, 65, 0.1);
+}
+
+.matrix-avatar-container:hover {
+  border-color: rgba(0, 255, 65, 0.5);
+  box-shadow: 
+    0 0 30px rgba(0, 255, 65, 0.3),
+    inset 0 0 30px rgba(0, 255, 65, 0.15);
+}/*
+ Enhanced Pixelated Avatar Styling */
+.pixelated-avatar {
+  image-rendering: pixelated !important;
+  image-rendering: -moz-crisp-edges !important;
+  image-rendering: crisp-edges !important;
+  image-rendering: -webkit-optimize-contrast !important;
+  background: #1a1a1a;
+  object-fit: cover;
+  object-position: center;
+  filter: contrast(1.1) brightness(1.05);
+}/* Con
+tact Card Email Fix */
+.contact-card p {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  max-width: 100%;
+}
+
+/* Ensure contact cards have proper spacing */
+.contact-card {
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* Fix email text overflow */
+.email-text {
+  font-size: 0.875rem;
+  line-height: 1.25;
+  word-break: break-all;
+  overflow-wrap: anywhere;
+}
