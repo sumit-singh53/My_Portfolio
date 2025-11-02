@@ -35,6 +35,22 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) to view the portfolio.
 
+## Setup Instructions
+
+### 1. Environment Variables
+Copy `.env.example` to `.env.local` and fill in your values:
+```bash
+cp .env.example .env.local
+```
+
+### 2. Replace Placeholder Assets
+- **favicon.ico**: Create from your avatar using [favicon.io](https://favicon.io/favicon-converter/)
+- **meta-image.png**: Create a 1200x630px social media preview image
+
+### 3. Deployment
+- **GitHub Pages**: Push to main branch (auto-deploys via GitHub Actions)
+- **Vercel**: Connect your GitHub repo for instant deployment
+
 ## Project Structure
 
 ```

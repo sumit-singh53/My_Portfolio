@@ -10,11 +10,8 @@
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "export": "next build",
-    "deploy": "npm run build && touch out/.nojekyll",
-    "deploy:github": "npm run build && touch out/.nojekyll && gh-pages -d out",
-    "analyze": "cross-env ANALYZE=true npm run build",
-    "clean": "rimraf .next out",
-    "type-check": "tsc --noEmit"
+    "deploy": "npm run build",
+    "clean": "rm -rf .next out || rmdir /s .next out"
   },
   "dependencies": {
     "next": "latest",

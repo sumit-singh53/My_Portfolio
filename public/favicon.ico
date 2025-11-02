@@ -1,0 +1,9 @@
+# This is a placeholder for favicon.ico
+# To create a proper favicon:
+# 1. Use your pixel-avatar.png image
+# 2. Go to https://favicon.io/favicon-converter/
+# 3. Upload your pixel-avatar.png
+# 4. Download the generated favicon.ico
+# 5. Replace this file with the downloaded favicon.ico
+
+# For now, we'll use the pixel-avatar.png as the icon in the HTML head

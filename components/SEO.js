@@ -18,6 +18,8 @@ const SEO = ({
       <meta name="description" content={description} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="icon" href="/pixel-avatar.png" />
+      <link rel="apple-touch-icon" href="/pixel-avatar.png" />
+      <link rel="shortcut icon" href="/pixel-avatar.png" />
       <link rel="manifest" href="/manifest.json" />
       
       {/* Open Graph Meta Tags */}
