@@ -1,18 +1,29 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
   
   // Enable static exports for GitHub Pages deployment
   output: 'export',
   trailingSlash: true,
   distDir: 'out',
   
-  // Configure images for static export
+  // Configure images for static export (updated for Next.js 16)
   images: {
     unoptimized: true,
-    domains: ['github.com', 'raw.githubusercontent.com', 'avatars.githubusercontent.com'],
-    formats: ['image/webp', 'image/avif'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'github.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'raw.githubusercontent.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'avatars.githubusercontent.com',
+      },
+    ],
   },
   
   // Uncomment these lines if deploying to GitHub Pages with repository name
@@ -24,34 +35,11 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === 'production',
   },
   
-  // Performance optimizations
-  experimental: {
-    optimizeCss: true,
-    optimizePackageImports: ['react-icons'],
-  },
-  
-  // Headers for better caching and security
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
-          },
-        ],
-      },
-    ]
-  },
+  // Performance optimizations (removed experimental features causing issues)
+  // experimental: {
+  //   optimizeCss: true,
+  //   optimizePackageImports: ['react-icons'],
+  // },
 }
 
 module.exports = nextConfig
