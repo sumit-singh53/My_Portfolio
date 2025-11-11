@@ -23,8 +23,6 @@ A modern, responsive portfolio website showcasing my work as a Full Stack Develo
 - **Backend:** Django, Python, Node.js, REST APIs
 - **Data & ML:** Machine Learning, Data Analytics, Streamlit, Python
 - **DevOps:** Kubernetes, Microservices, Docker
-- **Security:** Quantum Cryptography, Post-Quantum Security
-- **Fintech:** Banking Systems, Payment Processing, Fraud Detection
 
 ## Getting Started
 
