@@ -230,7 +230,7 @@ Best regards,`);
               </button>
               <button 
                 onClick={() => {
-                  window.open('/resume.html', '_blank');
+                  window.open('/resume.pdf', '_blank');
                 }}
                 className="px-6 py-3 rounded transition-all duration-300 hover:scale-105 hover:shadow-lg font-semibold"
                 style={{
